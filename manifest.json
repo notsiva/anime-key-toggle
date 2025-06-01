@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Anime Key Toggle",
+  "version": "1.0.0",
+  "description": "Shows alternating overlay images on every key press. Useful for feedback, fun, or focus prompts.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "Toggle Image Viewer"
+  },
+  "author": "Sivakaran",
+  "homepage_url": "https://github.com/notsiva/key-toggle-image-extension"
+}
